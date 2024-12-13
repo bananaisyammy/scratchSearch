@@ -9,12 +9,21 @@
       type="module"
       src="https://pyscript.net/releases/2023.11.2/core.js"
     ></script>
+    <py-env>
+        - numpy
+        - matplotlib
+        - scratchattach
+    </py-env>
   </head>
   <body>
     <py-script>
+      import scratchattach as sa
+      
       from datetime import datetime
+      session = sa.login("kuretaka", "kureTaka9981")
+
       now = datetime.now()
-      print(f"今は{now:%Y年%m月%d日 %H:%M:%S}です。")
+      print(str(session.connect_project(1076217386).title))
     </py-script>
   </body>
 </html>
