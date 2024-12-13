@@ -20,10 +20,10 @@
   </head>
   <body>
     <py-script>
-      import scratchattach as sa
+      import scratchattach
       
       from datetime import datetime
-      session = sa.login("kuretaka", "kureTaka9981")
+      session = scratchattatch.login("kuretaka", "kureTaka9981")
 
       now = datetime.now()
       print(str(session.connect_project(1076217386).title))
